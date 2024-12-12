@@ -1,27 +1,45 @@
-# NgTestionServices
+============
+intro
+============
+-unit testint
+-end2end
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+router
+servicios cli
+kit para hacer testing
 
-## Development server
+============
+Jest vs Jasmine 
+============
+-jasmine se escribe las pruebas
+-karma  corre las pruebas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- framework famoso para pruebas "jest"
+- los framework de test la mayoria maneja la misma 	estructura
 
-## Code scaffolding
+-jasmin lo maneja con "it"
+-jest maneja "test"  
+-los matched jasmin & jest
+	expect(n).toBeNull();
+	expect(n).toBeDefined();
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-crear nuevo proyecto
+-karma es el test runing	
+-karma.conf.js
+	lanza un navegador
+-karma lee los archivos *.spec.ts
+-"spec", son las especificaciones contratos, se puede cambiar a test pero .spec es por defecto
+-correr el comando  
+	ng test
+-en linux y mac no debería haber probleams de correr en consola
 
-## Build
+[WSL]
+	-pero en WSL debe hacerse algunos pasos adicionales	
+	 ~/ sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove
+	 ~/ wget https:// dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	 audo apt -y install ./google-chrome-stable_current_amd64.deb
+	 	para verificar 
+	 		google-chrome --version
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+	-ir al archivo karma y configurar
+		browsers: ['ChromeHeadless']   //para servidores de integracion continua
