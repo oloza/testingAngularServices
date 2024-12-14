@@ -43,3 +43,35 @@ Jest vs Jasmine
 
 	-ir al archivo karma y configurar
 		browsers: ['ChromeHeadless']   //para servidores de integracion continua
+
+============
+test
+============
+-crear un archivo *.spec.ts 
+-usar "describe" para iniciar las pruebas
+-"it" para crear pruebas
+-"expect" para comparar
+-mantra de test las "3A"
+	Arrange  //preparar
+	Act
+	Assert
+
+============
+Explorando matchers
+============
+-matchers son ayudas que te da el framework
+	.toEqual(value) //compara si dos valores son iguales
+	.not.toEqual(value) //compara si dos valores son diferentes 
+	.toBe(value) //compara si dos valores son iguales
+	.toBeFalsy() //compara si un valor es falso
+	.toBeTruthy() //compara si un valor es verdadero
+	.toBeDefined() //compara si un valor es definido
+	.toBeUndefined() //compara si un valor es indefinido
+	.toBeNull() //compara si un valor es nulo
+	.toContain(value) //compara si un valor esta contenido en otro
+	.toMatch(value) //compara si un valor esta contenido en otro
+	.toBeLessThan(value) //compara si un valor es menor que otro
+	.toBeGreaterThan(value) //compara si un valor es mayor que otro
+	.toBeCloseTo(value, precision) //compara si un valor es cercano a otro
+	.toThrow(error) //compara si una funcion lanza un error
+-cuando no pruebas todo se llama happy path
