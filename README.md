@@ -75,3 +75,52 @@ Explorando matchers
 	.toBeCloseTo(value, precision) //compara si un valor es cercano a otro
 	.toThrow(error) //compara si una funcion lanza un error
 -cuando no pruebas todo se llama happy path
+
+============
+Reporte de cobertura
+============
+-estadisticas de que linea de codigo no han sido ejecutadas 
+- poner en modo no escucha  no watch no va a hacer live load (termina el proceso y no escucha cambios)
+- configurar en karma.conf.js
+	plugins: [
+		...require('karma-coverage'),
+		]
+- execute	
+	ng test --no-watch --code-coverage
+
+-te crea una nueva carpeta llamada coverage	
+"#x" 1x, 2x ... and so,  te indica cuantes veces se ha ejecutado esa linea al mandar las pruebas
+
+-para correr solo los test que requieren antes del describe colar "f" de focus (Jasmine)
+-el reporte de covertura te puede indicar que casos faltan probar resaltadolo
+
+-configurar un umbral minimo de cobertura para las pruebas (karma.conf.js)
+	coverageReporter: {
+		dir: ...
+		subdir: '...',
+		reporters: [
+			...
+		],
+		check: {                  -- from here
+			global: {
+				statements: 80,   --cada sentencia que se este ejecunta 80 %
+				branches: 80,  --80%
+				functions: 80,  --80%
+				lines: 80,
+			},
+		}
+
+============
+Mocha report
+============
+- log mas amigable recomendaod por la comunidad 
+	npm install karma-mocha-reporter --save-dev
+-configurar en karma.conf.js	
+	plugins:[
+		require('karma-mocha-reporter'),
+	]
+   ...
+   reporters: ['mocha'],   --quitar 'progress','kjhtml'
+
+-se puece encapsular los "it" en un "describe" para mejor lectura
+
