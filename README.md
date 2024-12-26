@@ -124,3 +124,17 @@ Mocha report
 
 -se puece encapsular los "it" en un "describe" para mejor lectura
 
+============
+Pruebas unitarias para servicios
+============
+-crear un servicio
+ng g s services/value
+
+-para el observable
+import { of } from 'rxjs';
+
+-cada "it" es un escenario de prueba, deberia ser insolada, es decir, no afectar ni depender de otro "it"
+-el siguiente comando es ejecutado antes de una prueba
+	beforeEach(() => {
+		service = new ValueService();
+	})
