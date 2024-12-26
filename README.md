@@ -138,3 +138,13 @@ import { of } from 'rxjs';
 	beforeEach(() => {
 		service = new ValueService();
 	})
+
+============
+Servicios con dependencias
+============	
+-testear servicios con dependencias
+-crear un servicio extra
+	ng g s services/master
+- en angular la inyeccion de dependencias se hace en el constructor y utiliza el patron singleton
+-tipos mocks o tipo fake
+-los fakes son la manera menos aconsejable por el mantenimioento que se le debe dar
