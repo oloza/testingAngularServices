@@ -181,3 +181,14 @@ TestBed + Spies
 ============		
 -simpre hay que hacer una prueba de que el servicio fue creado de forma correcta
 	it('should be create',()=>{})
+
+-implementar los spies
+	beforeEach(() => {
+    const spy =  jasmine.createSpyObj('ValueService', ['getValue']);
+	...
+	providers: [
+        MasterService,
+        { provide: ValueService, useValue: spy }
+      ]
+	...
+	valueServiceSpy=TestBed.inject(ValueService) as jasmine.SpyObj<ValueService>;	  
