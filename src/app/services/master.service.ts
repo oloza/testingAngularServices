@@ -11,7 +11,9 @@ export class MasterService {
   ) { }
 
   getValue() {
+    // this.valueService.getValue();
     return this.valueService.getValue();
+    // return 'fake value';
   }
   
 }

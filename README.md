@@ -148,3 +148,12 @@ Servicios con dependencias
 - en angular la inyeccion de dependencias se hace en el constructor y utiliza el patron singleton
 -tipos mocks o tipo fake
 -los fakes son la manera menos aconsejable por el mantenimioento que se le debe dar
+
+============
+Spies
+============
+-para  saber si dentro un servicio se llamo a un metodo en especifico
+-no intersa lo que devuelve sino que se llame
+-se puede "espiar" cuantas veces fue llamado un metodo
+- MOCKING
+	-son objetos simulados (pseudo-objetos mock object, objectos de pega imitan objetos reales)
