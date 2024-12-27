@@ -5,20 +5,18 @@ import { FakeValueService } from './value-fake.service';
 
 
 describe('MasterService', () => {
-
   let masterService: MasterService;
-
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [MasterService]
     });
-  });
     masterService= TestBed.inject(MasterService);
+  });
 
-    it('should be created', () => {
-      expect(masterService).toBeTruthy();
-    });
+  it('should be created', () => {
+       expect(masterService).toBeTruthy();
+     });
 
   it('should return "my value" from the real service', () => {
     const valueService = new ValueService();

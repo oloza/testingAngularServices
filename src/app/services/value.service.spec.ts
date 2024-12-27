@@ -8,7 +8,7 @@ describe('ValueService', () => {
     TestBed.configureTestingModule({
       providers: [ValueService]
     });
-    // service = new ValueService();
+      // service = new ValueService(); //this is for comment
     service= TestBed.inject(ValueService);
   });
 
@@ -32,18 +32,16 @@ describe('ValueService', () => {
 
   describe('Tests for getPromiseValue', () => {
     it('should return "promise value" from promise with then', (doneFn) => {
-      service.getPromiseValue()
-      .then((value)=>{
+      service.getPromiseValue().then((value) => {
         expect(value).toBe('promise value');
         doneFn();
+      });
     });
+
+    it('should return "promise value" from promise using async', async () => {
+      const rta = await service.getPromiseValue();
+      expect(rta).toBe('promise value');
+    });
+
   });
-
-  it('should return "promise value" from promise using async', async() => {
-    const rta = await service.getPromiseValue()
-    expect(rta).toBe('promise value');
-  });
-});
-
-
 });
