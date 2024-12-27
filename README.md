@@ -157,3 +157,27 @@ Spies
 -se puede "espiar" cuantas veces fue llamado un metodo
 - MOCKING
 	-son objetos simulados (pseudo-objetos mock object, objectos de pega imitan objetos reales)
+
+============
+Usando las herramientas de Angular
+============
+-angular tiene una suite amplia para testing
+-importar un paquete de angular, te ayuda a crear un modulo para 
+	import{TestBed} from '@angular/core/testing';
+	...
+	TestBed.configureTestingModule({
+		providers: [ valueService ]
+			...
+		imports: [
+			RouterTestingModule,
+			...
+		],
+
+-se inyecta el servicio en lugar de instanciar , por el patron singleton
+	service= TestBed.inject(ValueService);
+
+============
+TestBed + Spies
+============		
+-simpre hay que hacer una prueba de que el servicio fue creado de forma correcta
+	it('should be create',()=>{})
