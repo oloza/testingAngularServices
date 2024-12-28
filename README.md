@@ -192,3 +192,23 @@ TestBed + Spies
       ]
 	...
 	valueServiceSpy=TestBed.inject(ValueService) as jasmine.SpyObj<ValueService>;	  
+
+============
+setup Maquetacion del proyecto
+============
+-framework liviano 
+	milligram
+	pico.css
+	simple.css
+-utilizaremos pico
+	npm install @picocss/pico
+-ir al archivo angular.json
+	"styles": [
+		"src/styles.css",
+		"./node_modules/@picocss/pico/css/pico.min.css"
+	]
+
+-generar dos componentes
+	ng g c components/products
+	ng g c components/pico-preview
+-agregar las rutas en app-routing.module.ts
