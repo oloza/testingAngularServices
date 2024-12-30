@@ -212,3 +212,12 @@ setup Maquetacion del proyecto
 	ng g c components/products
 	ng g c components/pico-preview
 -agregar las rutas en app-routing.module.ts
+
+============
+Product Service
+============
+-crear archivo environments
+	ng g environment
+
+-crear modelos (copy from repo)
+-crear product.service.ts (copy from repo)
