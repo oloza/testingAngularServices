@@ -221,3 +221,16 @@ Product Service
 
 -crear modelos (copy from repo)
 -crear product.service.ts (copy from repo)
+
+============
+HttpClientTestingModule
+============
+-angular tiene httpClientTestingModule para testear servicios http
+-la API corre en el backend
+-se va hacer mocking de los requests
+-para usar el http cliente se debe crear un modulo interno para obtener esa directiva o libreria
+-angular tiene modulo http para pruebas
+	import { HttpClientTestingModule } from '@angular/common/http/testing';
+-puedes centrate solo en el servicio usando "focus"-> fdescribe
+-se puede colocar una "x" antedes del describe para saltar el test
+-tambien usar HttpTestingController para hacer mocking de todas las 
