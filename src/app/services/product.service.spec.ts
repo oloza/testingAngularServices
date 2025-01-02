@@ -22,7 +22,7 @@ fdescribe('ProductService', () => {
      });
 
  describe('test for getAllSimple',()=>{
-    it('should return a pruducts list',()=>{
+    it('should return a pruduct list',(doneFn)=>{
         //Arrange
         const mockData:Product[]=[
             {id:'123',
@@ -37,10 +37,11 @@ fdescribe('ProductService', () => {
         }
         ];
         //Act
-        productService.getAll()
-        .subscribe(()=>{
+        productService.getAllSimple()
+        .subscribe((data)=>{
             //Assert
-            doneFn();
+            expect(data.length).toEqual(mockData.length);
+             doneFn();
         });
         const url =`${environment.API_URL}/api/v1/products` ;  
         const req = httpController.expectOne(url);
@@ -49,3 +50,5 @@ fdescribe('ProductService', () => {
  });
 
 });
+
+

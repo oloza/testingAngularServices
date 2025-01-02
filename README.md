@@ -234,3 +234,11 @@ HttpClientTestingModule
 -puedes centrate solo en el servicio usando "focus"-> fdescribe
 -se puede colocar una "x" antedes del describe para saltar el test
 -tambien usar HttpTestingController para hacer mocking de todas las 
+-en el it para promesas,callbacks u observables se debe poner una funcion "doneFn" para que el test se termine 
+	it('should return a pruduct list',(doneFn)=>{
+		...
+		productService.getAll()
+		.subscribe((data)=>{
+			...
+			doneFn();
+		});
