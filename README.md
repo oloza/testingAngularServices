@@ -242,3 +242,19 @@ HttpClientTestingModule
 			...
 			doneFn();
 		});
+	
+============
+generando Mocks
+============
+-generar mocks de forma automatizada
+-instalar la libreria dependencia desa
+	npm install @faker-js/faker@6.0.0-alpha.6 --save-dev    #for compatibility into example @6.0.0-alpha.6
+-generalmente los mocks estan al lado de los modelos
+-en el archivo mock.ts
+	import  faker  from '@faker-js/faker'; 
+	...
+	export const generateOneProduct = ():Product=>{
+    return{
+        id:faker.datatype.uuid(),
+        title:faker.commerce.productName(),
+	...
